@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="theme-color" content="#0a0908" />
+  <title>DOOM — iPhone</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="brand" id="brand">
+      <h1>DOOM</h1>
+      <p>1997 linuxdoom on your iPhone 16 Pro Max</p>
+      <button type="button" id="startBtn" class="cta">Enter Hell</button>
+      <p id="status" class="status">Loading…</p>
+    </header>
+
+    <main id="stage" class="stage" hidden>
+      <canvas id="screen" width="320" height="200" aria-label="DOOM screen"></canvas>
+
+      <div class="pad pad-move" aria-hidden="true">
+        <button class="btn" data-key="up" style="grid-area:u">▲</button>
+        <button class="btn" data-key="left" style="grid-area:l">◀</button>
+        <button class="btn" data-key="right" style="grid-area:r">▶</button>
+        <button class="btn" data-key="down" style="grid-area:d">▼</button>
+      </div>
+
+      <div class="pad pad-action" aria-hidden="true">
+        <button class="btn btn-fire" data-key="fire">FIRE</button>
+        <button class="btn" data-key="use">USE</button>
+        <button class="btn" data-key="strafe">STR</button>
+        <button class="btn" data-key="speed">RUN</button>
+      </div>
+
+      <div class="pad pad-meta" aria-hidden="true">
+        <button class="btn btn-sm" data-key="esc">ESC</button>
+        <button class="btn btn-sm" data-key="enter">ENT</button>
+        <button class="btn btn-sm" data-key="tab">MAP</button>
+        <button class="btn btn-sm" data-key="w1">1</button>
+        <button class="btn btn-sm" data-key="w2">2</button>
+        <button class="btn btn-sm" data-key="w3">3</button>
+      </div>
+    </main>
+  </div>
+
+  <script src="doom.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

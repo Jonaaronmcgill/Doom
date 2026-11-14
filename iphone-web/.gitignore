@@ -1,0 +1,7 @@
+build/
+# Large generated binaries — rebuild with `make` (WAD is downloaded/copied at build time)
+dist/doom.js
+dist/doom.wasm
+dist/doom.data
+wad/*.wad
+dist/
